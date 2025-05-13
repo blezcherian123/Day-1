@@ -1,0 +1,34 @@
+version: "3.1"
+
+stories:
+- story: pricing inquiry
+  steps:
+    - intent: ask_pricing
+    - action: utter_ask_pricing
+
+- story: support request
+  steps:
+    - intent: ask_support
+    - action: utter_ask_support
+
+- story: trial question
+  steps:
+    - intent: ask_trial
+    - action: utter_ask_trial
+
+- story: API question
+  steps:
+    - intent: ask_api
+    - action: utter_ask_api
+
+- story: security inquiry
+  steps:
+    - intent: ask_security
+    - action: utter_ask_security
+
+- story: greet and bye
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: goodbye
+    - action: utter_goodbye

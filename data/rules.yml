@@ -1,0 +1,13 @@
+version: "3.1"
+
+rules:
+- rule: Respond to out-of-scope
+  steps:
+    - intent: fallback
+    - action: utter_default
+
+- rule: Start booking form
+  steps:
+  - intent: book_room
+  - action: booking_form
+  - active_loop: booking_form

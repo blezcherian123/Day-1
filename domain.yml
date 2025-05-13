@@ -1,0 +1,69 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - book_hotel
+  - check_availability
+  - ask_room_types
+  - ask_amenities
+  - ask_price
+  - confirm_booking
+  - cancel_booking
+  - provide_dates
+  - provide_guest_info
+
+entities:
+  - check_in_date
+  - check_out_date
+  - room_type
+  - guest_count
+  - price_range
+  - amenities
+
+slots:
+  check_in_date:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: check_in_date
+  check_out_date:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: check_out_date
+  room_type:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: room_type
+  guest_count:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: guest_count
+
+responses:
+  utter_greet:
+    - text: "Welcome to our hotel booking service! How can I assist you today?"
+  
+  utter_ask_dates:
+    - text: "What are your check-in and check-out dates?"
+  
+  utter_ask_guests:
+    - text: "How many guests will be staying?"
+  
+  utter_confirm_booking:
+    - text: "I've found the following booking details:\nCheck-in: {check_in_date}\nCheck-out: {check_out_date}\nGuests: {guest_count}\nRoom type: {room_type}\nWould you like to confirm this booking?"
+
+  utter_booking_confirmed:
+    - text: "Great! Your booking has been confirmed. You'll receive a confirmation email shortly."
+
+  utter_goodbye:
+    - text: "Thank you for using our hotel booking service. Have a great day!"
+
+actions:
+  - action_check_availability
+  - action_book_room
+  - action_show_room_types
+  - action_calculate_price

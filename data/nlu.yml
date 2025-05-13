@@ -1,0 +1,101 @@
+version: "3.1"
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - hey there
+    - greetings
+    - hi there
+    - howdy
+    - what's up
+    - good afternoon
+
+- intent: goodbye
+  examples: |
+    - bye
+    - goodbye
+    - see you around
+    - see you later
+    - farewell
+    - until next time
+    - catch you later
+    - signing off
+    - talk to you later
+    - gotta go
+    - bye for now
+
+- intent: book_room
+  examples: |
+    - I want to book a room
+    - make a reservation
+    - I need a room for 2 nights
+    - book me a suite
+    - can I reserve a room?
+    - looking to book accommodation
+    - need a hotel room
+    - want to stay at your hotel
+    - make a booking
+    - reserve a deluxe room
+    - I'd like to book a stay
+
+- intent: inquire_price
+  examples: |
+    - what are your rates?
+    - how much for a room?
+    - price for a suite
+    - what's the cost?
+    - room prices
+    - rate for standard room
+    - how much per night?
+    - pricing information
+    - what do you charge?
+    - cost of deluxe room
+    - what's the nightly rate?
+
+- intent: ask_amenities
+  examples: |
+    - what amenities do you have?
+    - do you have a pool?
+    - is there free wifi?
+    - what facilities are available?
+    - do you have a gym?
+    - restaurant options
+    - what services do you offer?
+    - is breakfast included?
+    - parking available?
+    - business center?
+    - spa services?
+    - room service?
+
+- intent: ask_location
+  examples: |
+    - where are you located?
+    - what's your address?
+    - how to get there?
+    - directions to hotel
+    - map location
+    - is it near downtown?
+    - distance from airport
+    - proximity to attractions
+    - where exactly is the hotel?
+    - neighborhood information
+    - public transport options
+
+- intent: cancel_booking
+  examples: |
+    - I need to cancel my reservation
+    - cancel booking
+    - want to cancel my stay
+    - how to cancel?
+    - cancel my room
+    - terminate reservation
+    - need to cancel
+    - cancel BK-20240512094500
+    - undo booking
+    - revoke reservation
+    - cancel last booking
